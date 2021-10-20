@@ -1,21 +1,18 @@
+<?php
 
+session_start();
+require_once 'header.php';
+echo "<div class='center'>Welcome to Robin's Nest,";
+if ($loggedin) echo " $user, you are logged in";
+else           echo ' please sign up or log in';
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo"this is title"; ?></title>
-</head>
-<body>
-    <?php
-    echo "hello world this is first program";
-    
-    echo 5+9;
-
-?>
-<div></div>
-</body>
+echo<<<_END
+    </div><br>
+    </div>
+    <div data-role="footer">
+      <h4>Thank you for visiting. All rights reserved.</h4>
+    </div>
+  </body>
 </html>
-
+_END;
+?>
